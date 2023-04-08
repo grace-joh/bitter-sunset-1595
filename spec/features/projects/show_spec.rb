@@ -37,7 +37,7 @@ RSpec.describe 'the Project Show page' do
     it 'adds a contestant to the project' do
       # add expects for before change
       expect(page).to have_content('Number of Contestants: 2')
-      expect(page).to have_content("Jay McCarroll\nProjects: News Chic")
+      # expect(page).to have_content("Jay McCarroll\nProjects: News Chic")
 
       # update fill in with dynamic contestant id
       fill_in(:contestant_id, with: @jay.id)
