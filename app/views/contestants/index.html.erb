@@ -1,5 +1,8 @@
 <h1>Contestants</h1>
 <% @contestants.each do |contestant| %>
-  <h3><%= contestant.name %></h3>
-  <p>Projects: <%= contestant.all_projects %></p>
+  # create div with id for feature testing within blocks
+  <div id="contestant-<%= contestant.id %>">
+    <h3><%= contestant.name %></h3>
+    <p>Projects: <%= contestant.all_projects %></p>
+  </div>
 <% end %>

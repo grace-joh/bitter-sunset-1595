@@ -28,5 +28,20 @@ RSpec.describe Project, type: :model do
         expect(@lit_fit.average_experience).to eq(0)
       end
     end
+
+    # add tests for new methods
+    describe '#challenge_theme' do
+      it 'returns the project challenge theme' do
+        expect(@news_chic.challenge_theme).to eq('Recycled Material')
+        expect(@boardfit.challenge_theme).to eq('Recycled Material')
+      end
+    end
+
+    describe '#contestant_count' do
+      it 'returns the number of contestants in a project' do
+        expect(@news_chic.contestant_count).to eq(2)
+        expect(@boardfit.contestant_count).to eq(2)
+      end
+    end
   end
 end

@@ -1,11 +1,13 @@
 <h1><%= @project.name %></h1>
 <p>Material: <%= @project.material %></p>
-<p>Challenge Theme: <%= @project.challenge.theme %></p>
-<p>Number of Contestants: <%= @project.contestants.size %></p>
+<%# update below two lines to call method (no querying!) %>
+<p>Challenge Theme: <%= @project.challenge_theme %></p>
+<p>Number of Contestants: <%= @project.contestant_count %></p>
 <p>Average Contestant Experience: <%= @project.average_experience %></p>
 <br>
 <h3>Add a Contestant</h3>
-<%= form_with url: "/projects/#{@project.id}", method: :post, local: true do |f| %>
+# fix path to correct route/controller action 
+<%= form_with url: "/projects/#{@project.id}/contestants", method: :post, local: true do |f| %>
   <%= f.number_field :contestant_id, placeholder: "Contestant ID" %>
   <%= f.submit "Add Contestant to Project" %>
 <% end %>
